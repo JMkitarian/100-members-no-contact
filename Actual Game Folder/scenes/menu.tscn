@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://v7nekrafjjr1"]
 
+[ext_resource type="Script" uid="uid://kyffy40dsnga" path="res://Actual Game Folder/scripts/menu/let_it_rip_exit.gd" id="1_jgfn2"]
+[ext_resource type="Script" uid="uid://fnlcs0a8nlkg" path="res://Actual Game Folder/scripts/menu/let_it_rip_play.gd" id="2_pvo6j"]
+
 [node name="Menu" type="Control" unique_id=1552408488]
 layout_mode = 3
 anchors_preset = 0
@@ -22,10 +25,12 @@ text = "BEYBLADE!!"
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1341774072]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1017300428]
+[node name="Let it RIP" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1017300428]
 layout_mode = 2
 text = "Let it RIP"
+script = ExtResource("1_jgfn2")
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=876020753]
+[node name="Let it rip!" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=876020753]
 layout_mode = 2
 text = "Let it rip!"
+script = ExtResource("2_pvo6j")
