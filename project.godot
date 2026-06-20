@@ -15,6 +15,10 @@ run/main_scene="uid://lmqeo6epk8da"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="100-members-no-contact"
+
 [input]
 
 left={
