@@ -23,6 +23,7 @@ extends CharacterBody2D
 ]
 @export var enemy_id: String = ""
 var defeated: bool = false
+var is_talking= false
 
 func _ready():
 	if animator:

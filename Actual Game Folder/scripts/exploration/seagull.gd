@@ -11,7 +11,8 @@ var step_timer = 0.0
 
 
 func _physics_process(delta: float) -> void:
-
+	if body.is_talking:
+		return
 	direction_timer -= delta
 	if direction_timer <= 0.0:
 		direction_timer = randf_range(0.3, 2.8)

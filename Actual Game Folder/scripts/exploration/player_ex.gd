@@ -165,12 +165,16 @@ func _on_interaction_detector_body_entered(body):
 		
 		if near_enemy.has_method("show_indicator"):
 			near_enemy.show_indicator()
+			if "is_talking" in near_enemy:
+				near_enemy.is_talking= true
 
 func _on_interaction_detector_body_exited(body):
 	#See ya later aligator
 	if body == near_enemy:
 		if near_enemy.has_method("hide_indicator"):
 			near_enemy.hide_indicator()
+			if "is_talking" in near_enemy:
+				near_enemy.is_talking= false
 			
 		near_enemy = null
 		print("He is fleeing!!!")
