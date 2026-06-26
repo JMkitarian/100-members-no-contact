@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b7bbs67vyh2ro" path="res://Actual Game Folder/sprites/tilesets/InteriorTilesLITE.png" id="1_h4sms"]
 [ext_resource type="Texture2D" uid="uid://c42vj6tndoutg" path="res://Actual Game Folder/sprites/tilesets/TX Tileset Grass.png" id="1_h8c3x"]
 [ext_resource type="PackedScene" uid="uid://b1227f3u8ele1" path="res://Actual Game Folder/scenes/components/exploration/player_ex.tscn" id="3_ac8e4"]
+[ext_resource type="Texture2D" uid="uid://dxglp8bqxykad" path="res://Miscellanious Assets Dump/Image/LixianPlushie.png" id="3_acmel"]
 [ext_resource type="PackedScene" uid="uid://xv8it6luhbrs" path="res://Actual Game Folder/scenes/levels/exploration/door.tscn" id="4_mk0ui"]
 [ext_resource type="PackedScene" uid="uid://cb7yp1ck2dxle" path="res://Actual Game Folder/scenes/components/exploration/beyblade_pickup.tscn" id="5_pkup0"]
 [ext_resource type="PackedScene" uid="uid://dq4lpjpb86ee5" path="res://Actual Game Folder/scenes/components/exploration/television.tscn" id="6_wec0n"]
@@ -641,6 +642,10 @@ tile_set = SubResource("TileSet_acmel")
 rendering_quadrant_size = 32
 physics_quadrant_size = 32
 
+[node name="LixianPlush" type="Sprite2D" parent="." unique_id=1026329175]
+position = Vector2(100, 212)
+texture = ExtResource("3_acmel")
+
 [node name="Door" parent="." unique_id=433099157 instance=ExtResource("4_mk0ui")]
 position = Vector2(184, 369)
 mode = 1
@@ -658,7 +663,7 @@ position = Vector2(7, 2)
 [node name="AnimatedSprite2D" parent="Television/CharacterBody2D" parent_id_path=PackedInt32Array(1917266711, 1500952215) index="2" unique_id=1686201453]
 position = Vector2(7, 2)
 
-[node name="PlayerEx" parent="." unique_id=2130211876 instance=ExtResource("3_ac8e4")]
+[node name="PlayerEx" parent="." unique_id=598382722 instance=ExtResource("3_ac8e4")]
 position = Vector2(97, 53)
 
 [editable path="Television"]

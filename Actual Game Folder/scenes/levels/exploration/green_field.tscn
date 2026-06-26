@@ -1138,6 +1138,7 @@ position = Vector2(845, 337)
 position = Vector2(767, 671)
 
 [node name="CharacterBody2D" parent="Seagull" index="0" unique_id=1226606288]
+next_scene = "uid://cqnmw2fn6swal"
 reward = "seagull_contempt"
 enemy_id = "seagull1"
 
