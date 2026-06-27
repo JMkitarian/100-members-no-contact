@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://blg2e204oqwme" path="res://Actual Game Folder/scenes/components/exploration/lizard.tscn" id="8_muyyu"]
 [ext_resource type="PackedScene" uid="uid://cqjdtoavoh5wu" path="res://Actual Game Folder/scenes/components/exploration/seagull.tscn" id="9_e3i70"]
 [ext_resource type="PackedScene" uid="uid://c6860iad8dtsb" path="res://Actual Game Folder/scenes/components/exploration/grave.tscn" id="14_br5mg"]
+[ext_resource type="Script" uid="uid://b1h2f2iwtg0mn" path="res://Actual Game Folder/scripts/exploration/base_enemy.gd" id="15_bqdsr"]
+[ext_resource type="Texture2D" uid="uid://k2fpbxdq6l8s" path="res://Actual Game Folder/scenes/fuzesi/sprites/Sailor_Fuzesi_Civillian.png" id="16_lbofu"]
+[ext_resource type="FontFile" uid="uid://dv0dl3euktrdp" path="res://Miscellanious Assets Dump/Fonts/COMIC-SANS.otf" id="17_w7wp7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ao2ok"]
 texture = ExtResource("1_smi17")
@@ -1063,6 +1066,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_muyyu")
 sources/1 = SubResource("TileSetAtlasSource_e3i70")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyepi"]
+size = Vector2(50.66667, 55.333336)
+
 [node name="GreenField" type="Node2D" unique_id=279297441]
 script = ExtResource("1_bpl4k")
 
@@ -1145,6 +1151,37 @@ enemy_id = "seagull1"
 [node name="Grave" parent="." unique_id=483528663 instance=ExtResource("14_br5mg")]
 position = Vector2(91.00001, 235)
 scale = Vector2(0.51, 0.51)
+
+[node name="SailorFüzesi" type="Node2D" parent="." unique_id=905165300]
+position = Vector2(354, 294)
+scale = Vector2(0.51, 0.51)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="SailorFüzesi" unique_id=328575819 groups=["interactable"]]
+scale = Vector2(0.904, 1.708)
+script = ExtResource("15_bqdsr")
+dialogue = Array[String](["Hiya! I'm Sailor Füzesi! ^^", "I added the bokeh (colorful balls floating) to the game :3", "Cool isn't it? :d"])
+is_bad = false
+enemy_name = "Sailor Füzesi"
+voice_pitch = 0.65
+
+[node name="Sprite2D2" type="Sprite2D" parent="SailorFüzesi/CharacterBody2D" unique_id=2065756663]
+position = Vector2(0, -5.228759)
+scale = Vector2(2.7836246, 1.209144)
+texture = ExtResource("16_lbofu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SailorFüzesi/CharacterBody2D" unique_id=168943865]
+position = Vector2(0, -1.6666679)
+shape = SubResource("RectangleShape2D_lyepi")
+
+[node name="Indicator" type="Label" parent="SailorFüzesi/CharacterBody2D" unique_id=615637060]
+visible = false
+offset_left = -17.3333
+offset_top = -40.0
+offset_right = 17.6667
+offset_bottom = -28.0
+theme_override_fonts/font = ExtResource("17_w7wp7")
+theme_override_font_sizes/font_size = 10
+text = "Press E"
 
 [editable path="PlayerEx"]
 [editable path="PlayerEx/CharacterBody2D/Camera2D/DialogueBox"]
