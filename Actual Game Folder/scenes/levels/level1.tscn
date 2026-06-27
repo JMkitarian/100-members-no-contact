@@ -13,8 +13,8 @@ tile_set = ExtResource("1_5x4pc")
 [node name="decoration" type="Node2D" parent="." unique_id=1759885026]
 
 [node name="Bokeh" parent="decoration" unique_id=457116108 instance=ExtResource("2_f878w")]
-position = Vector2(-607, -58)
-scale = Vector2(0.25, 0.25)
+position = Vector2(-739.00006, -291)
+scale = Vector2(0.925, 0.925)
 
 [node name="Bcy2a0" parent="decoration/Bokeh" index="0" unique_id=104785206]
 self_modulate = Color(1, 1, 1, 0.164706)
@@ -38,8 +38,8 @@ self_modulate = Color(1, 1, 1, 0.164706)
 self_modulate = Color(1, 1, 1, 0.164706)
 
 [node name="Bokeh2" parent="decoration" unique_id=760967506 instance=ExtResource("2_f878w")]
-position = Vector2(-193, -59)
-scale = Vector2(0.25, 0.25)
+position = Vector2(-195, -277)
+scale = Vector2(0.925, 0.925)
 
 [node name="Bcy2a0" parent="decoration/Bokeh2" index="0" unique_id=104785206]
 self_modulate = Color(1, 1, 1, 0.164706)
